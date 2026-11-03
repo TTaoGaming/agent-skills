@@ -1,0 +1,4 @@
+{"t":"2026-11-03T14:00:00Z","type":"plan","budget":50,"unit":"% of window","deadline":"2026-11-03T19:00:00Z","pattern":"builder+checker","quota_check":"manual/2h","run":"one-shot"}
+{"t":"2026-11-03T14:00:00Z","type":"quota","left":100,"source":"user"}
+{"t":"2026-11-03T14:20:00Z","type":"task","id":"T1","task":"Make parse_config() raise a clear error on an empty file","check":"pytest tests/test_config.py -q","status":"done","result":"pass","worker":"builder-1","checker":"checker-1","tokens":18400}
+{"t":"2026-11-03T16:00:00Z","type":"quota","left":71,"source":"user"}
