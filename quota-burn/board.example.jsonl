@@ -1,4 +1,7 @@
-{"t":"2026-11-03T14:00:00Z","type":"plan","budget":50,"unit":"% of window","deadline":"2026-11-03T19:00:00Z","pattern":"builder+checker","quota_check":"manual/2h","run":"one-shot"}
+{"t":"2026-11-03T14:00:00Z","type":"plan","cycle":1,"budget":50,"unit":"% of window","deadline":"2026-11-03T19:00:00Z","pattern":"builder+checker","telemetry":"manual/2h","change":"none (first cycle)"}
 {"t":"2026-11-03T14:00:00Z","type":"quota","left":100,"source":"user"}
-{"t":"2026-11-03T14:20:00Z","type":"task","id":"T1","task":"Make parse_config() raise a clear error on an empty file","check":"pytest tests/test_config.py -q","status":"done","result":"pass","worker":"builder-1","checker":"checker-1","tokens":18400}
+{"t":"2026-11-03T14:20:00Z","type":"task","cycle":1,"id":"T1","task":"Make parse_config() raise a clear error on an empty file","done_when":"pytest tests/test_config.py -q","status":"done","result":"pass","worker":"builder-1","checker":"checker-1","tokens":18400,"minutes":11}
+{"t":"2026-11-03T14:55:00Z","type":"task","cycle":1,"id":"T2","task":"Speed up the search loop in search.c without changing any result in tests/known_values.txt","done_when":"make test && ./bench --compare baseline.txt shows >=5% faster","status":"failed","result":"fail","worker":"builder-1","checker":"checker-1","tokens":52100,"minutes":30}
+{"t":"2026-11-03T15:10:00Z","type":"audit","cycle":1,"id":"T1","auditor":"auditor-1","verdict":"agree","why":"re-ran the test; it fails on the old code and passes on the new"}
 {"t":"2026-11-03T16:00:00Z","type":"quota","left":71,"source":"user"}
+{"t":"2026-11-03T16:05:00Z","type":"retro","cycle":1,"worked":["tests written first caught a wrong fix in T1"],"didnt":["T2 was too big for one task"],"change_next":"split speed-up tasks into one function each","checked_per_pct":0.03,"fail_rate":0.5,"audit_disagree":0}
